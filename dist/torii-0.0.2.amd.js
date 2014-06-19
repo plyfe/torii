@@ -1,6 +1,6 @@
 /**
-  @class RSVP
-  @module RSVP
+  @class Torii
+  @module Torii
   */
 define("torii/adapters/application", 
   ["exports"],
@@ -1127,7 +1127,7 @@ define("torii/session",
             container, provider
           );
 
-          return adapter.fetch();
+          return adapter.fetch(options);
         }).then(function(data){
           sm.send('finishFetch', data);
           return;
