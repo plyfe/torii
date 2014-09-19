@@ -1,6 +1,6 @@
 /**
  * Torii version: 0.2.0
- * Built: Wed Sep 17 2014 17:05:10 GMT-0400 (EDT)
+ * Built: Fri Sep 19 2014 11:44:31 GMT-0400 (EDT)
  */
 define("torii/adapters/application", 
   ["exports"],
@@ -1349,7 +1349,7 @@ define("torii/session",
             container, provider
           );
 
-          return adapter.fetch();
+          return adapter.fetch(options);
         }).then(function(data){
           sm.send('finishFetch', data);
           return;
